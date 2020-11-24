@@ -26,37 +26,37 @@ class _DepartementState extends State<Departement> {
         centerTitle: true,
       ),
       body: Center(
-          //Si la liste n'est pas encore chargée on affiche 1 cercle de progression
-          // si chargée on affiche la liste
-          child: this.listeDepartements == null
-              ? CircularProgressIndicator()
-              : ListView.builder(
-                  itemCount: this.listeDepartements == null
-                      ? 0
-                      : this.listeDepartements.length,
-                  itemBuilder: (context, index) {
-                    return Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Card(
-                        color: Colors.greenAccent,
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: RaisedButton(
-                            color: Colors.deepOrange,
-                            child: Text(
-                              this.listeDepartements[index]['nom'],
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 15),
-                            ),
-                            onPressed: () {
-                              Text('ok');
-                            },
+        //Si la liste n'est pas encore chargée on affiche 1 cercle de progression
+        // si chargée on affiche la liste
+        child: this.listeDepartements == null
+            ? CircularProgressIndicator()
+            : ListView.builder(
+                itemCount: this.listeDepartements == null
+                    ? 0
+                    : this.listeDepartements.length,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Card(
+                      color: Colors.greenAccent,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: RaisedButton(
+                          color: Colors.deepOrange,
+                          child: Text(
+                            this.listeDepartements[index]['nom'],
+                            style: TextStyle(color: Colors.white, fontSize: 15),
                           ),
+                          onPressed: () {
+                            Text('ok');
+                          },
                         ),
                       ),
-                    );
-                  },
-                )),
+                    ),
+                  );
+                },
+              ),
+      ),
     );
   }
 

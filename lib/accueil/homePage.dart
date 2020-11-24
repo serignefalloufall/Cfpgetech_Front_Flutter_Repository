@@ -1,4 +1,5 @@
 import 'package:cfpgetech_front/departement/depaertementListe.dart';
+import 'package:cfpgetech_front/departement/departementAdd.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -35,7 +36,7 @@ class _HomePageState extends State<HomePage> {
                 onPressed: () => Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (BuildContext context) => Departement(),
+                      builder: (BuildContext context) => RegisterDepartement(),
                     )))),
       ),
     );
